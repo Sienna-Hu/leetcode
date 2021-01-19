@@ -1,6 +1,7 @@
-// Idea:
 // Binary Search Iteratively: use two pointer (lo and hi) and update lo/hi based
 // on whether nums[mid] > target.
+
+// Idea:
 // In this question, we need to find the starting and ending position of a given
 // target value. Therefore, when search for a target, we need an additional
 // argument determine whether we want the left most target or right most target.
