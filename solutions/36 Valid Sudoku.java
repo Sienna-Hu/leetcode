@@ -55,7 +55,7 @@ class Solution {
 //      However, if in the same row/col/sub_box, there is duplicates, it cannot
 //      be successfully added to the HashSet -> return false
 class Solution {
-    public boolean isValidSudoku(char[][] board) {
+    public boolean isValidSudoku2(char[][] board) {
         HashSet<String> val_info= new HashSet<>():
 
         for (int i=0; i<9; i++) {

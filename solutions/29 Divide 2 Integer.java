@@ -37,7 +37,7 @@ class Solution {
 /** Improvement: substract multiple divisor from dividend each time to reduce
 the execution time of while loop */
 class Solution {
-    public int divide(int dividend, int divisor) {
+    public int divide2(int dividend, int divisor) {
         // Handle Overflow: Range [-2^31, 2^31-1], negative part has one more value,
         // converting to positive causes overflow problems
         if (dividend == Integer.MIN_VALUE && divisor == -1) return Integer.MAX_VALUE;
