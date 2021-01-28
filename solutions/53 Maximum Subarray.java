@@ -13,15 +13,15 @@
       nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
 
       Iterate through each index of nums:
-        maxSubArray(nums, 0) is [-2, sum = -2]
-        maxSubArray(nums, 1) is [1, sum = 1] since 1 > -2 + 1
-        maxSubArray(nums, 2) is [1, -3, sum = -2] since 1 + -3 > -3
+        maxSubArray(nums, 0) is [-2]
+        maxSubArray(nums, 1) is [1] since 1 > -2 + 1
+        maxSubArray(nums, 2) is [1, -3] since 1 + -3 > -3
+        maxSubArray(nums, 3) is [4] since -2 + 4 < 4
         ...
-        we need to know the previous maxSubArray sum to compute the current
-        maxSubArray sum
+        At a new index, we need to decide whether to add in the element on this
+        index to the previous maxSubArray or make it a separate new subArray.
 
       Compare maxSubArray values at each index, the largest one is the answer
-
    */
 
 class Solution {
