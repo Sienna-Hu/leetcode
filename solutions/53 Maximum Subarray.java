@@ -6,7 +6,7 @@
 
    Idea:
    Subproblem here is maxSubArray(int[] nums, int endIdx), which returns the
-   maxSubArray value for nums[0..endIdx]
+   maxSubArray value for subArray ending on endIdx
    Then the global problem is maxSubArray(nums, nums.length - 1)
    e.g.
       index =  0  1   2  3   4  5  6   7  8
@@ -30,6 +30,8 @@ class Solution {
         int currMax = nums[0];
 
         for (int i=1; i< nums.length; i++) {
+            // when we update currMax, we lose information about whether this newly
+            // formed subArray's sum is larger than any previous subArray
             currMax = Math.max(currMax + nums[i], nums[i]);
             gloabalMax = Math.max(gloabalMax, currMax);
         }
