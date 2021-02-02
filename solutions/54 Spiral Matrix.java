@@ -73,6 +73,50 @@ class Solution {
         2. Do not need to switch start and end (name are misleading)
            Call them top, down, left, right
            As we can see from my solution code, after we moved along a layer,
-           we only change one value of start and end, the other remains the same
+           we only change one value of start and end, the other remains the same.
+        3. Do not need to count how many elements how many elements we have added.
+           As long as top <= down && left <= right, there are elements haven't
+           been iterated.
       */
+      public List<Integer> spiralOrder2(int[][] matrix) {
+        int dir = 0;
+        int right = matrix[0].length - 1;
+        int left = 0;
+        int down = matrix.length - 1;
+        int top = 0;
+        List<Integer> ans = new ArrayList<>();
+
+        while (left <= right && top <= down) {
+            if (dir == 0) {
+                for (int i = left; i <= right; i++) {
+                    ans.add(matrix[top][i]);
+                }
+                top++;
+                dir = 1;
+            }
+            else if (dir == 1) {
+                for (int i = top; i <= down; i++) {
+                    ans.add(matrix[i][right]);
+                }
+                right--;
+                dir = 2;
+            }
+            else if (dir == 2) {
+                for (int i = right; i >= left; i--) {
+                    ans.add(matrix[down][i]);
+                }
+                down--;
+                dir = 3;
+            }
+            else {
+                for (int i = down; i >= top; i--){
+                    ans.add(matrix[i][left]);
+                }
+                left++;
+                dir = 0;
+            }
+        }
+
+        return ans;
+    }
 }
