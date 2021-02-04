@@ -18,7 +18,8 @@ class Solution {
     }
 
     /** Improvement:
-        Binary search -> Time complexity O(nlogn). */
+        Binary search: Equivalent to find 0 <= sqrt <= x in a sorted list. 
+        -> Time complexity O(nlogn). */
     public int mySqrt(int x) {
 		    long i = 0;
 		    long j = x;
