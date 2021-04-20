@@ -7,7 +7,7 @@
 // argument determine whether we want the left most target or right most target.
 
 // Notes:
-// Be careful when potient index out of range
+// Be careful when potential index out of range
 
 // Help function: find the leftmost and rightmost index where the target
 // should be inserted in sorted array nums.

@@ -12,7 +12,7 @@
 
    ith row jth column represents if p[:j] matches s[:i]
    For example, 2nd row 3 column represents if p[:2] == "c*" matches s[:3]=="aab"
-   Quateria to etermine the value in match:
+   Criteria to determine the value in match:
    1. If s == null && p == null, i.e. match[0][0] == true
    2. If s != null && p == null, i.e. match[0][i] == false (default value)
    3. If s == null && p != null, i.e. match[i][0]
