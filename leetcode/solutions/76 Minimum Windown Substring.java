@@ -24,7 +24,7 @@ class MinSubstring {
       map[ce]--;
       end++;
 
-      // when constraints are satisfied, reduce to minimum
+      // when constraints are satisfied, reduce to minimum by moving start to right
       while (counter == 0) {
         if (min > end - start) {
           min = end - start;
